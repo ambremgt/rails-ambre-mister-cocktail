@@ -8,17 +8,19 @@
 <h2>Create your own recipe!</h2>
 
 <div class="container">
+  <div class="row">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-trip">
+    <div class="card-trip col-md-12 col-lg-5 m-3">
       <img src="https://source.unsplash.com/1600x900/?nature,water" />
       <div class="card-trip-infos">
         <div>
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-          <p>See the recipe!</p>
         </div>
+        <h2 class=“card-trip-review”><%= link_to 'Create your recipe!', new_cocktail_dose_path(cocktail) %></h2>
       </div>
     </div>
   <% end %>
+  </div>
 </div>
 
 <button type="button" class="btn btn-outline-dark"><%= link_to "Add your cocktail", new_cocktail_path %></button>

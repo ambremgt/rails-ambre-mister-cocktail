@@ -3,6 +3,12 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 50px;
+  padding: 0px !important;
+
+    a {
+      color: grey;
+      text-decoration: none;
+    }
 }
 
 .card-trip > img {
@@ -41,4 +47,12 @@
 
 .card-link {
   color: black;
+}
+
+
+.card-trip-review {
+      a {
+      color: grey;
+      text-decoration: none;
+    }
 }
