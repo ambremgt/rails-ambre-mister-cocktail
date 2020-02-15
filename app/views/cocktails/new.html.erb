@@ -1,12 +1,19 @@
-<div class="banner-new-cocktail" style="background-image: url(https://images.pexels.com/photos/2479243/pexels-photo-2479243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-  <h1>Create a new cocktail</h1>
+<div class="banner-new-cocktail" style="background-image: url(https://images.pexels.com/photos/316891/pexels-photo-316891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <h1>WHAT'S YOUR COCKTAIL? </h1>
 </div>
 
-<div>
-  <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
-  <% end %>
-<%= link_to "Go back", cocktails_path, class: "btn btn-treehouse"%>
+<div class="container">
+  <div class="formulaire">
+    <h2>CHOSE YOUR<i class="highlighted-orange highlighted"> COCKTAIL</i> 🍸</h2>
+    <div>
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="div-button">
+    <%= link_to "GO BACK 👈", cocktails_path, class: "btn btn-treehouse"%>
+  </div>
 </div>

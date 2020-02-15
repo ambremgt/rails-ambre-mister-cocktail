@@ -20,20 +20,23 @@ h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 30px;
   letter-spacing: 2px;
 }
 
-.highlighted-orange {
-  color: #ffcc00;
-  background: #fcf6d9;
-  font-weight: 900;
+.highlighted {
   line-height: 1.1em;
   display: inline-block;
   padding: 6px;
   font-style: normal;
   border-radius: 3px;
+  font-weight: 900;
+}
+
+.highlighted-orange {
+  color: #ffcc00;
+  background: #fcf6d9;
 }
 
 .btn {
