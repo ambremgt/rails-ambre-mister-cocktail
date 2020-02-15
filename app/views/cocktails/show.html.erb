@@ -1,15 +1,32 @@
-<h1><%= @cocktail.name.capitalize %> recipe</h1>
+<div class="banner-new-cocktail" style="background-image: url(https://images.pexels.com/photos/319893/pexels-photo-319893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <h1><%= @cocktail.name.upcase %></h1>
+</div>
 
-<% @cocktail.doses.each do |dose| %>
-  <li ><%= dose.description %> -
-      <%= Ingredient.find(dose.ingredient_id).name %>
-      <%= link_to "Delete", dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?" }  %>
-    </li>
-<% end %>
 
-<%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Go back to cocktails", cocktails_path %>
 
-<% if @cocktail.photo.attached? %>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
+<div class="container">
+  <div class="container-yellow">
+    <h2>YOUR <i class="highlighted-orange highlighted"> <%= @cocktail.name.upcase %></i> RECIPE 🍹</h2>
+    <div class="description">
+    <% @cocktail.doses.each do |dose| %>
+      <li style="list-style:none; text-decoration: none">⚡️ <%= dose.description.capitalize %> -
+        <%= Ingredient.find(dose.ingredient_id).name.capitalize %>
+        <%= link_to "❌", dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?" }  %>
+      </li>
+    <div class="description" style="display: flex;">
+      <% if @cocktail.photo.attached? %>
+        <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="div-button">
+  <div>
+    <%= link_to "ADD AN INGREDIENT 🍉", new_cocktail_dose_path(@cocktail), class: "btn btn-ingredient" %>
+    <%= link_to "GO BACK 👈", cocktails_path, class: "btn btn-treehouse" %>
+  </div>
+</div>
+
