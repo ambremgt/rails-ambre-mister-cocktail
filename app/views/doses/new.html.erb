@@ -3,17 +3,19 @@
 </div>
 
 <div class="container">
-  <div class="container-yellow">
-    <h2>CREATE YOUR <i class="highlighted-orange highlighted"> RECIPE</i> 🍋</h2>
-    <div>
-      <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description %>
-      <%= f.association :ingredient %>
-      <%= f.submit "Submit" %>
-      <% end %>
+  <div class="row">
+    <div class="container-yellow">
+      <h2>CREATE YOUR <i class="highlighted-orange highlighted"> RECIPE</i> 🍋</h2>
+      <div>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit 'ADD MY RECIPE', class: "btn btn-form" %>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="div-button">
+  <div class="div-button" >
     <%= link_to "GO BACK 👈", cocktails_path, class: "btn btn-treehouse" %>
   </div>
 </div>

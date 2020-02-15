@@ -3,17 +3,19 @@
 </div>
 
 <div class="container">
-  <div class="container-yellow">
-    <h2>CHOSE YOUR<i class="highlighted-orange highlighted"> COCKTAIL</i> 🍸</h2>
-    <div>
-      <%= simple_form_for @cocktail do |f| %>
-        <%= f.input :name %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit %>
-      <% end %>
+  <div class="row">
+    <div class="container-yellow" class="card-trip col-md-12 col-lg-5 m-3">
+      <h2>CHOSE YOUR <i class="highlighted-orange highlighted"> COCKTAIL</i> 🍸</h2>
+      <div>
+        <%= simple_form_for @cocktail do |f| %>
+          <%= f.input :name %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit 'ADD TO MY LIST', class: "btn btn-form" %>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="div-button">
+  <div class="div-button" >
     <%= link_to "GO BACK 👈", cocktails_path, class: "btn btn-treehouse"%>
   </div>
 </div>

@@ -10,19 +10,21 @@
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 2px;
+  box-shadow: 1px 4px 5px #ededed;
 }
 .btn-treehouse:hover {
   opacity: 1;
-  background: #f7aa62;
+  background: #f97070;
   text-decoration: none;
   color: white;
   border: 0px;
-  border: solid 1px #f7aa62;;
+  border: solid 1px #f97070;
 }
 
-.btn-ingredient {
+
+.btn-form {
   color: #4b4d4f;
-  padding: 16px 24px;
+  padding: 16px 8px;
   font-weight: bold;
   background: transparent;
   border: solid 1px #4b4d4f;
@@ -32,12 +34,14 @@
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 2px;
+  margin-top: 10px;
+  box-shadow: 1px 4px 5px #ededed;
 }
-.btn-ingredient:hover {
+.btn-form:hover {
   opacity: 1;
-  background: #f7aa62;
+  background: #f97070;
   text-decoration: none;
   color: white;
   border: 0px;
-  border: solid 1px #f7aa62;;
+  border: solid 1px #f97070;
 }
