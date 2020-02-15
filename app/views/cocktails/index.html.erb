@@ -1,26 +1,27 @@
 <div class="banner">
-  <h1>Fancy Cocktail</h1>
+  <h1>FANCY COCKTAIL</h1>
   <p>
     <span id="banner-typed-text"></span>
   </p>
 </div>
 
-<h2>Create your own recipe!</h2>
+<h2>CREATE YOUR<i class="highlighted-orange highlighted">COCKTAIL</i></h2>
 
 <div class="container">
-  <div class="row">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card-trip col-md-12 col-lg-5 m-3">
-      <img src="https://images.pexels.com/photos/2789328/pexels-photo-2789328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-trip col-md-12 col-lg-5 m-3">
+        <img src="https://images.pexels.com/photos/2789328/pexels-photo-2789328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <div class="card-trip-infos">
+          <div>
+            <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+          </div>
         </div>
-        <h2 class=“card-trip-review”><%= link_to 'Create your recipe!', new_cocktail_dose_path(cocktail) %></h2>
       </div>
+    <% end %>
     </div>
-  <% end %>
+  <div class="div-button">
+<%= link_to "ADD A COCKTAIL", new_cocktail_path, class: "btn btn-treehouse" %>
   </div>
-<%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-treehouse" %>
 </div>
 

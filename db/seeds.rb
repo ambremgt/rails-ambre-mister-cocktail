@@ -12,9 +12,10 @@ Dose.destroy_all
 
 puts 'Creating categories...'
 
-gin = Cocktail.create!(name: "Gin To")
+gin = Cocktail.create!(name: "Gin Tonic")
 sunrise = Cocktail.create!(name: "Tequila Sunrise")
-caipirina = Cocktail.create!(name: "caipirina")
+caipirinha = Cocktail.create!(name: "Caipirinha")
+punch = Cocktail.create!(name: "Ti Punch")
 
 lemon = Ingredient.create(name: "lemon")
 ice = Ingredient.create!(name: "ice")
@@ -22,9 +23,11 @@ menthol = Ingredient.create!(name: "menthol")
 salt = Ingredient.create!(name: "salt")
 tequila = Ingredient.create!(name: "tequila")
 perrier = Ingredient.create!(name: "perrier")
+gin = Ingredient.create!(name: "Bombay")
 
-Dose.create!(description: "12cl", cocktail_id: gin.id, ingredient_id: lemon.id)
-Dose.create!(description: "9cl", cocktail_id: sunrise.id, ingredient_id: tequila.id)
-Dose.create!(description: "9cl", cocktail_id: caipirina.id, ingredient_id: caipirina.id)
+Dose.create!(description: "12cl de Gin, 1 rondelle de concombre et du Schweppes", cocktail_id: gin.id, ingredient_id: gin.id)
+Dose.create!(description: "9cl de rhum et du jus d'orange", cocktail_id: sunrise.id, ingredient_id: tequila.id)
+Dose.create!(description: "9cl de cachaça, des glaçons et un citron vert", cocktail_id: caipirinha.id, ingredient_id: caipirinha.id)
+Dose.create!(description: "12cl de rhum, du citron vert et de la cassonade", cocktail_id: punch.id, ingredient_id: punch.id)
 
 puts 'Finished!'

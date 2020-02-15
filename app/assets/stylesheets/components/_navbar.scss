@@ -16,3 +16,28 @@
 .navbar-lewagon-white {
   background-color: white;
 }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active .nav-link {
+  color: white;
+  font-weight: bolder;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #f7aa62;
+}
+
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    color: white;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: white;
+}
