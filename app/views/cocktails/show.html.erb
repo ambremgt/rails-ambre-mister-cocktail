@@ -10,17 +10,19 @@
       <h2>YOUR <i class="highlighted-orange highlighted"> <%= @cocktail.name.upcase %></i> RECIPE 🍹</h2>
       <div class="description">
       <% @cocktail.doses.each do |dose| %>
-        <li style="list-style:none; text-decoration: none">⚡️ <%= dose.description.capitalize %> -
+          <div style="margin-top: 50px;">
+            <% if @cocktail.photo.attached? %>
+              <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
+          </div>
+        <li style="list-style:none; text-decoration: none; margin-top: 30px;">⚡️ <%= dose.description.capitalize %> -
           <%= Ingredient.find(dose.ingredient_id).name.capitalize %>
           <%= link_to "❌", dose_path(dose.id), method: :delete, data: { confirm: "Are you sure?" }  %>
         </li>
-      <div class="description" style="display: flex;">
-        <% if @cocktail.photo.attached? %>
-          <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
-      </div>
       <% end %>
-    <%= link_to "ADD AN INGREDIENT 🍉", new_cocktail_dose_path(@cocktail), class: "btn btn-form" %>
+      </div>
+      <div class="div-button">
+        <%= link_to "ADD AN INGREDIENT 🍉", new_cocktail_dose_path(@cocktail), class: "btn btn-treehouse" %>
       </div>
     </div>
   </div>
